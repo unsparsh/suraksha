@@ -3,54 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
-    background-color: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+    color: #fe424d;
+    margin-bottom: 20px;
 }
 
 textarea {
     width: 100%;
     height: 100px;
     padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-    margin-bottom: 10px;
     font-size: 16px;
+    resize: none;
 }
 
 button {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #fe424d;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s;
 }
 
@@ -58,56 +50,10 @@ button:hover {
     background-color: #d93b44;
 }
 
+/* Linked List Styles */
 .linked-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.node {
-    background-color: #fe424d;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 8px;
-    position: relative;
-    text-align: center;
-}
-
-.link {
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    margin: 0 5px;
-}
-
-.node:first-child::before,
-.node:last-child::after {
-    content: "";
-    width: 15px;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.node:first-child::before {
-    left: -15px;
-}
-
-.node:last-child::after {
-    right: -15px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.linked-list {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -116,37 +62,20 @@ button:hover {
 .node {
     background-color: #fe424d;
     color: white;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 8px;
-    position: relative;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
     text-align: center;
+    min-width: 60px;
+    flex-grow: 1;
 }
 
 .link {
-    width: 30px;
+    width: 20px;
     height: 2px;
     background-color: black;
-    margin: 0 5px;
-}
-
-.node:first-child::before,
-.node:last-child::after {
-    content: "";
-    width: 15px;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.node:first-child::before {
-    left: -15px;
-}
-
-.node:last-child::after {
-    right: -15px;
+    margin: 5px;
+    flex-shrink: 0;
 }
 
 .edit-button {
@@ -165,13 +94,15 @@ button:hover {
     color: #fff;
 }
 
+/* Queue Styles */
 .queue {
     margin-top: 20px;
     padding: 20px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -200,4 +131,45 @@ button:hover {
 
 .new-version-button:hover {
     background-color: #d93b44;
+}
+
+/* Toggle Switch */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-switch {
+    background-color: #fe424d;
+}
+
+input[type="checkbox"]:checked + .toggle-switch:before {
+    transform: translateX(20px);
 }
