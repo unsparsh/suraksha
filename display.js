@@ -120,7 +120,7 @@ function showWarning(serialNumber) {
     // Create warning item
     const warningItem = document.createElement('div');
     warningItem.className = 'warning-item';
-    warningItem.textContent = "Warning: Data Stealing Detected!";
+    warningItem.textContent = "Warning: Unauthorized Data Manipulation!";
 
     // Create a separate div for the changed node serial number
     const changeItem = document.createElement('div');
